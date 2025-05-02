@@ -11,14 +11,14 @@ function App() {
   return (
     <Router>
       <div className="flex">
-        <ColSideBar />
+        {/* <ColSideBar /> */}
         <div className="w-4/5">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Density" element={<Density />} />
+            {/* <Route path="/Density" element={<Density />} />
             <Route path="/GDP" element={<GDP />} />
             <Route path="/Diploma" element={<Diploma />} />
-            <Route path="/PoorHouseholds" element={<PoorHouseholds />} />
+            <Route path="/PoorHouseholds" element={<PoorHouseholds />} /> */}
           </Routes>
         </div>
       </div>

@@ -62,9 +62,7 @@ export default function VNMap() {
         }),
       ]);
 
-      json(
-        "https://raw.githubusercontent.com/TungTh/tungth.github.io/master/data/vn-provinces.json"
-      ).then((json) => {
+      json("mapVietNam.json").then((json) => {
         json.features.forEach((feature) => {
           var dataProvince = parseFloat(feature.properties.Ma);
           var correspondingData = data.find(
@@ -87,9 +85,7 @@ export default function VNMap() {
           .append("path")
           .attr("d", path)
           .style("fill", function (d) {
-            var value =
-              d.properties.cases &&
-              d.properties.population
+            var value = d.properties.cases && d.properties.population;
 
             console.log(map);
             if (value > 0) {
@@ -145,9 +141,6 @@ export default function VNMap() {
 
   return (
     <div className="drawChart border-4 border-black bg-white ml-20 pl-8">
-      <h1 className="flex justify-center items-center font-bold text-lg">
-        MAP POPULATION OF VIETNAM
-      </h1>
       <div id="drawChart"></div>
     </div>
   );
